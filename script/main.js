@@ -1,6 +1,6 @@
-let img1 = ['url(../img/bg.png) repeat', 'url(../img/icons.jpg) -25px -20px no-repeat', '650px auto'];
-let img2 = ['url(../img/bg.png) repeat', 'url(../img/icons.jpg) -255px -20px no-repeat', '650px auto'];
-let img3 = ['url(../img/bg.png) repeat', 'url(../img/icons.jpg) -25px -265px no-repeat', '650px auto'];
+let img1 = ['url(https://raw.githubusercontent.com/ArtiomB5/5MemoryGameBeginnersJSProject/main/img/bg.png) repeat', 'url(https://raw.githubusercontent.com/ArtiomB5/5MemoryGameBeginnersJSProject/main/img/icons.jpg) -25px -20px no-repeat', '650px auto'];
+let img2 = ['url(https://raw.githubusercontent.com/ArtiomB5/5MemoryGameBeginnersJSProject/main/img/bg.png) repeat', 'url(https://raw.githubusercontent.com/ArtiomB5/5MemoryGameBeginnersJSProject/main/img/icons.jpg) -255px -20px no-repeat', '650px auto'];
+let img3 = ['url(https://raw.githubusercontent.com/ArtiomB5/5MemoryGameBeginnersJSProject/main/img/bg.png) repeat', 'url(https://raw.githubusercontent.com/ArtiomB5/5MemoryGameBeginnersJSProject/main/img/icons.jpg) -25px -265px no-repeat', '650px auto'];
 //параметры изображений
 
 let scoreCounter = 0;
