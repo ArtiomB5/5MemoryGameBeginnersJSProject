@@ -1,0 +1,40 @@
+.container .row1__11 {
+  grid-area: c11;
+  /*
+  background: url(../img/iconsnew.jpg);
+  background-repeat: no-repeat;
+  background-size: 650px auto;
+  background-position: -25px -20px;
+  */
+}
+.container .row1__12 {
+  grid-area: c12;
+  /*
+  background: url(../img/iconsnew.jpg);
+  background-repeat: no-repeat;
+  background-size: 650px auto;
+  background-position: -255px -20px;
+  */
+}
+.container .row1__13 {
+  grid-area: c13;
+}
+.container .row2__21 {
+  grid-area: c21;
+  background-color: white;
+}
+.container .row2__22 {
+  grid-area: c22;
+}
+.container .row2__23 {
+  grid-area: c23;
+}
+.container .gameTable {
+  display: grid;
+  grid-template-columns: repeat(3, 210px);
+  grid-template-rows: repeat(2, 210px);
+  grid-template-areas: "c11 c12 c13" "c21 c22 c23";
+}
+.container .box {
+  outline: 1px solid black;
+}
