@@ -112,23 +112,28 @@ function clicksCompare(paramArray) {
             document.getElementById(paramArray[1][1]).style.backgroundSize = newBg(paramArray[1][1])[2];
             //отображение второй нажатой ячейки
 
-            //обработка случая, ессли "содержимое" ячеек совпадает
-            if (document.getElementById(paramArray[0][1]).style.background === document.getElementById(paramArray[1][1]).style.background) {
-                alert('Match!');
-                document.getElementById(paramArray[0][1]).style.background = ''
-                document.getElementById(paramArray[1][1]).style.background = '';
-                clicks = [];
-                scoreCounter++;
-                document.getElementById('score').innerHTML = "Score: " + scoreCounter;
-            } else {
-                 //обработка случая, ессли "содержимое" ячеек не совпадает
-                alert('No match!');
-                document.getElementById(paramArray[0][1]).style.background = newBg(paramArray[0][1])[0];
-                document.getElementById(paramArray[1][1]).style.background = newBg(paramArray[1][1])[0];
-                clicks = [];
-                failedAttemptsCounter++;
-                document.getElementById('failedAttempts').innerHTML = "Failed Attempts: " + failedAttemptsCounter;
+            //сравнение содержимого 2х нажатых ячеек
+            function clicksMatch() {
+                if (document.getElementById(paramArray[0][1]).style.background === document.getElementById(paramArray[1][1]).style.background) {
+                    alert('Match!');
+                    document.getElementById(paramArray[0][1]).style.background = ''
+                    document.getElementById(paramArray[1][1]).style.background = '';
+                    clicks = [];
+                    scoreCounter++;
+                    document.getElementById('score').innerHTML = "Score: " + scoreCounter;
+                } else {
+                    //обработка случая, ессли "содержимое" ячеек не совпадает
+                    alert('No match!');
+                    document.getElementById(paramArray[0][1]).style.background = newBg(paramArray[0][1])[0];
+                    document.getElementById(paramArray[1][1]).style.background = newBg(paramArray[1][1])[0];
+                    clicks = [];
+                    failedAttemptsCounter++;
+                    document.getElementById('failedAttempts').innerHTML = "Failed Attempts: " + failedAttemptsCounter;
+                }
             }
+
+            //установка задержки, перед вызовом функции обрабатывающейсодержимого 2х ячеек
+            setTimeout(clicksMatch, 500);
         }
 
         //обработка двойного нажатия на одну ячейку
